@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "photographer_profiles",
+  "info": {
+    "singularName": "photographer-profile",
+    "pluralName": "photographer-profiles",
+    "displayName": "Photographer Profile",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "about": {
+      "type": "text"
+    }
+  }
+}

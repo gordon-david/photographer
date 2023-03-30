@@ -2,6 +2,7 @@ export default function GalleryImage(props: {
   src: string;
   alt: string;
   title: string;
+  className:string;
 }) {
   return (
     <div className={props.className + " flex flex-col justify-center"}>

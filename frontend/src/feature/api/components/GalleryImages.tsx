@@ -1,13 +1,12 @@
-import useApi from "../useApi.ts";
-import GalleryImage from "./GalleryImage.tsx";
+import {useApi} from "../useApi";
+import GalleryImage from "./GalleryImage";
 
 export default function GalleryImages() {
   const api = useApi();
 
   return (
     <div className="flex flex-col">
-      {api.loaded ? (
-        api.data.galleryImages.map((i, idx) => (
+      { api.data.galleryImages.map((i, idx) => (
           <GalleryImage
             src={i.url}
             alt={i.title}
@@ -16,9 +15,7 @@ export default function GalleryImages() {
             className="my-4"
           />
         ))
-      ) : (
-        <div> loading... </div>
-      )}
+      }
     </div>
   );
 }

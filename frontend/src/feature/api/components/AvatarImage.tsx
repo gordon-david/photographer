@@ -1,4 +1,4 @@
-import useApi from "../useApi.ts";
+import {useApi} from "../useApi";
 
 export default function AvatarImage(props: { className: string }) {
   const api = useApi();

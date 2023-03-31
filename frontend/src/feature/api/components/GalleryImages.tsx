@@ -5,14 +5,14 @@ export default function GalleryImages() {
   const api = useApi();
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-wrap justify-center">
       { api.data.galleryImages.map((i, idx) => (
           <GalleryImage
             src={i.url}
             alt={i.title}
             title={i.title}
             key={i.url + idx}
-            className="my-4"
+            className="p-4 lg:basis-1/2"
           />
         ))
       }

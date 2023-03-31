@@ -4,7 +4,7 @@ import { AvatarImage } from "../feature/api";
 export default function About() {
   return (
     <div>
-      <AvatarImage className="aspect-square rounded-full w-1/2 mx-auto" />
+      <AvatarImage className="object-cover w-60 h-60 rounded-full  mx-auto" />
       <AboutMeText className="flex flex-col" />
     </div>
   );

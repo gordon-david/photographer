@@ -1,11 +1,9 @@
 The goal of this project is to prototype how well Strapi's REST api works as a simple client-facing CMS. In particular, this project is aimed at a photographer who wishes to...
 
 - Add, Remove, and Modify images in their site's gallery; along with the text associated with any images.
-- Modify any text on the site, for example:
-    - The /about page will have the following text elements, each will be editable by the client via the Django Admin Site.
-        - "About": A text block that may consist of one or more paragraphs.
-        - "About Headline": Bolded header text that sits at the top of the page.
+- Modify any text on the site.
 
 Some known limitations of this sytem:
-- Can't add multiple 'types' of data under a single entry. Client's will be unable to include an image that sits between text elements on their own. The data is static and uniform.
+
+- The data types in the CMS are atomic and static in the sense that to add or restructure the data requires development time (as opposed to being completely editable by the Client). For instance, client's will be unable to include an image that sits between text elements on their own. The data is static and uniform. The client can only add or remove elements that the developer has built support for.
 - Changes to data types, styling, or content structure will need to be done by the developer.

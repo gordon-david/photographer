@@ -1,7 +1,16 @@
-import {useApi} from "../useApi";
+import { useApi } from "../useApi";
 
-export default function AvatarImage(props: { className?: string, style?: object }) {
+export default function AvatarImage(props: {
+  className?: string;
+  style?: object;
+}) {
   const api = useApi();
 
-  return <img className={props.className} src={api.data.avatarUrl} style={props.style} />;
+  return (
+    <img
+      className={props.className}
+      src={api.data.avatarUrl}
+      style={props.style}
+    />
+  );
 }

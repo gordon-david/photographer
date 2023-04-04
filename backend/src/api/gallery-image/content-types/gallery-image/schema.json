@@ -4,7 +4,8 @@
   "info": {
     "singularName": "gallery-image",
     "pluralName": "gallery-images",
-    "displayName": "Gallery Image"
+    "displayName": "Gallery Image",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,20 +13,27 @@
   "pluginOptions": {},
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "title": {
       "type": "string"
     },
     "description": {
       "type": "text"
+    },
+    "image_collection": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::image-collection.image-collection",
+      "inversedBy": "gallery_images"
     }
   }
 }

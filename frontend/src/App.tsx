@@ -76,7 +76,7 @@ function App() {
             }`}
           >
             <header>
-              <div className="w-full sm:hidden h-12 bg-amber-50 flex items-center justify-between px-2">
+              <div className="w-full sm:hidden h-12 flex items-center justify-between px-2">
                 <h1 className="text-3xl font-bold italic">NAME</h1>
                 <button
                   onClick={() => {

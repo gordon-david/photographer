@@ -13,6 +13,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Navbar from "./components/Navbar";
+import { NavLink } from "./components/NavLink";
 import { ApiProvider } from "./feature/api";
 import { useState } from "react";
 
@@ -31,31 +32,9 @@ const MobileNav = (props: { handleClose: () => void; open: boolean }) => (
       close
     </button>
     <ul className="flex flex-col w-full">
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
-      <li>link</li>
+					<NavLink path="/" text="Home" />
+					<NavLink path="/gallery" text="Gallery" />
+					<NavLink path="/about" text="About" />
     </ul>
   </div>
 );
@@ -77,7 +56,7 @@ function App() {
           >
             <header>
               <div className="w-full sm:hidden h-12 flex items-center justify-between px-2">
-                <h1 className="text-3xl font-bold italic">NAME</h1>
+                <h1 className="text-3xl font-bold italic hover:text-red-500"><Link to="/">NAME</Link></h1>
                 <button
                   onClick={() => {
                     setOpen(!open);

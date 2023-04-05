@@ -32,9 +32,9 @@ const MobileNav = (props: { handleClose: () => void; open: boolean }) => (
       close
     </button>
     <ul className="flex flex-col w-full">
-					<NavLink path="/" text="Home" />
-					<NavLink path="/gallery" text="Gallery" />
-					<NavLink path="/about" text="About" />
+      <NavLink path="/" text="Home" />
+      <NavLink path="/gallery" text="Gallery" />
+      <NavLink path="/about" text="About" />
     </ul>
   </div>
 );
@@ -56,7 +56,7 @@ function App() {
           >
             <header>
               <div className="w-full sm:hidden h-12 flex items-center justify-between px-2">
-														<PhotographerNameHero />
+                <PhotographerNameHero />
                 <button
                   onClick={() => {
                     setOpen(!open);

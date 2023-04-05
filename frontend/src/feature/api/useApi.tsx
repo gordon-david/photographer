@@ -48,7 +48,6 @@ export function ApiProvider({ children }: { children: ReactNode }) {
   }
 
   useEffect(() => {
-		console.log(token)
 
     fetch(`${apiUrl}/api/gallery-images?populate=*`, {
       headers: { Authorization: "bearer " + token },

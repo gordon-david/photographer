@@ -6,9 +6,9 @@ import {
   useContext,
 } from "react";
 
-const token =
-  "8175697c85b20b9eb277e585af3c9225c08080316aae69954e1137d04716cba721cc6ec3826b9089a0c9170190ca9638d6a9895c738bb1e4d9784f722abfc783eac125641d4f17d76040bc918bb73b3ec7fad738b31b8fdb49849383d6a46ca7a167e44b14721ee4b60410929fa00804b9d98d548d153efa0d30d891af1453cf";
+// const token = "8175697c85b20b9eb277e585af3c9225c08080316aae69954e1137d04716cba721cc6ec3826b9089a0c9170190ca9638d6a9895c738bb1e4d9784f722abfc783eac125641d4f17d76040bc918bb73b3ec7fad738b31b8fdb49849383d6a46ca7a167e44b14721ee4b60410929fa00804b9d98d548d153efa0d30d891af1453cf";
 
+const token = `${import.meta.env.VITE_API_TOKEN}`;
 const apiUrl = "http://localhost:5000";
 
 interface PhotographerProfile {
@@ -48,6 +48,8 @@ export function ApiProvider({ children }: { children: ReactNode }) {
   }
 
   useEffect(() => {
+		console.log(token)
+
     fetch(`${apiUrl}/api/gallery-images?populate=*`, {
       headers: { Authorization: "bearer " + token },
     })

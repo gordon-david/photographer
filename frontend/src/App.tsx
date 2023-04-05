@@ -14,7 +14,7 @@ import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Navbar from "./components/Navbar";
 import { NavLink } from "./components/NavLink";
-import { ApiProvider } from "./feature/api";
+import { ApiProvider, PhotographerNameHero } from "./feature/api";
 import { useState } from "react";
 
 const standardTransition = "transition-all duration-700 ease-in-out ";
@@ -56,7 +56,7 @@ function App() {
           >
             <header>
               <div className="w-full sm:hidden h-12 flex items-center justify-between px-2">
-                <h1 className="text-3xl font-bold italic hover:text-red-500"><Link to="/">NAME</Link></h1>
+														<PhotographerNameHero />
                 <button
                   onClick={() => {
                     setOpen(!open);

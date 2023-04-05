@@ -98,6 +98,7 @@ const FadingImages = (props: { images?: ReactNode[] }) => {
     <div>
       {images.map((e: ReactNode, idx: number) => (
         <div
+										key={idx}
           className={`${
             current === idx ? "" : "hidden"
           } animate-[fade_4s_ease-out]`}
